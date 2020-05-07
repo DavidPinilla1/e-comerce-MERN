@@ -17,7 +17,14 @@ const userSchema = new mongoose.Schema({
     },
     tokens: [String],
 }, {
-    timestamps: true
+    timestamps: true,
+    toJSON: {
+        transform: (doc, ret) => {
+            delete ret.tokens;
+            delete ret.password;
+            return ret;
+        }
+    },
 });
 const UserModel = mongoose.model('User', userSchema);
 module.exports = UserModel;
