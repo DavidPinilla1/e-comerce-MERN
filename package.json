@@ -7,21 +7,7 @@
         "start": "concurrently \"cd backend && nodemon index.js \"  \"cd frontend && npm start \"",
         "postinstall": "concurrently \"cd backend && npm i \"  \"cd frontend && npm i \""
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/GeeksHubsAcademy/login-MEAN.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/GeeksHubsAcademy/login-MEAN/issues"
-    },
-    "homepage": "https://github.com/GeeksHubsAcademy/login-MEAN#readme",
     "devDependencies": {
         "concurrently": "^5.1.0"
-    },
-    "dependencies": {
-        "antd": "^4.2.0"
     }
 }
