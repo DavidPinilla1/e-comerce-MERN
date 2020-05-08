@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { API_URL } from '../../api-config';
 import axios from 'axios';
 import './Home.scss'
-import Product from '../../components/Product/Product';
+import ProductItem from '../../components/Product/ProductItem';
 const Home = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -12,7 +12,7 @@ const Home = () => {
     }, [])
     return (
         <div className="products">
-            {products.map(product => <Product product={product}/>)}
+            {products.map(product => <ProductItem key={product._id} product={product}/>)}
         </div>
     )
 }

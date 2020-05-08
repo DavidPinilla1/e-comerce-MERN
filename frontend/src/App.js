@@ -16,6 +16,7 @@ function App() {
           <Route path="/login" component={Login} exact/>
           <Route path="/product/:_id" component={ProductDetail} exact/>
         </Switch>
+
       </BrowserRouter>
     </div>
   );
