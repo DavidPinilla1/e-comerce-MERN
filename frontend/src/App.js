@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import Home from './containers/Home/Home';
 import Register from './containers/User/Register/Register';
 import Login from './containers/User/Login/Login';
-import ProductDetail from './containers/ProductDetail/ProductDetail';
+import ProductDetail from './containers/ProductDetail/ProductDetailFuncional';
 function App() {
   return (
     <div className="App">
@@ -16,7 +16,6 @@ function App() {
           <Route path="/login" component={Login} exact/>
           <Route path="/product/:_id" component={ProductDetail} exact/>
         </Switch>
-
       </BrowserRouter>
     </div>
   );

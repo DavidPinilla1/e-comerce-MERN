@@ -20,5 +20,8 @@
     "homepage": "https://github.com/GeeksHubsAcademy/login-MEAN#readme",
     "devDependencies": {
         "concurrently": "^5.1.0"
+    },
+    "dependencies": {
+        "antd": "^4.2.0"
     }
 }

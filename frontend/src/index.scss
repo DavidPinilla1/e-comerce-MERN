@@ -16,6 +16,9 @@ body {
 
 a {
     all: unset;
+    &:hover {
+        color: $white;
+    }
 }
 
 code {
