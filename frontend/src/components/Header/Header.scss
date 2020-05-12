@@ -5,7 +5,8 @@
     background-color: $darkblue;
     color: $white;
     font-size: 1rem;
-    .guestZone {
+    .guestZone,
+    .userZone {
         display: flex;
     }
     a {
