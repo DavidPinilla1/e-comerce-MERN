@@ -9,3 +9,13 @@ export const login = async(user) => {
         payload: res.data.user
     });
 }
+export const addCart = (product) => {
+
+    store.dispatch({
+        type: 'ADD_CART',
+        payload: product
+    })
+}
+export const logout = () => {
+
+}

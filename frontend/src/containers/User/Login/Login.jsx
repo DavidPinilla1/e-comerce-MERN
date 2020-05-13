@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Form, Input, Button, notification } from 'antd';
 import './Login.scss';
 import { useHistory } from 'react-router-dom';
@@ -11,7 +11,11 @@ const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
 };
 const Login = () => {
+    const emailInput = useRef(null);//evitamos hacer document.getElementById/querySelector
     const history = useHistory();//props.history
+    useEffect(() => {
+        emailInput.current.focus()
+    }, [])
     const onFinish = user => {
       login(user)
       .then(()=>{
@@ -42,7 +46,7 @@ const Login = () => {
                     name="email"
                     rules={[{ required: true, message: 'El email es requerido' }]}
                 >
-                    <Input />
+                    <Input ref={emailInput}/>
                 </Form.Item>
 
                 <Form.Item
