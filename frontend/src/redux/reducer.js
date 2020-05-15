@@ -15,6 +15,11 @@ const reducer = (state = { cart: [] }, action) => {
                 ...state,
                 cart: []
             }
+        case 'GET_ALL_PRODUCTS':
+            return {
+                ...state,
+                products: action.payload
+            }
         default:
             return state;
     }

@@ -10,7 +10,11 @@ const createStoreWithMiddleware = applyMiddleware(
 
 const store = createStoreWithMiddleware(
     reducer,
-    load(), // Loading done here
+    load({
+        preloadedState: {
+            cart: []
+        }
+    }), // Loading done here
     composeEnhancers(),
 );
 

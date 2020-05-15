@@ -9,8 +9,20 @@ export const login = async(user) => {
         payload: res.data.user
     });
 }
-export const addCart = (product) => {
+export const getProducts = async() => {
+    const res = await axios.get(API_URL + '/products');
+    store.dispatch({
+        type: 'GET_ALL_PRODUCTS',
+        payload: res.data
+    });
+}
+export const clearCart = () => {
+    store.dispatch({
+        type: 'CLEAR_CART'
+    });
+}
 
+export const addCart = (product) => {
     store.dispatch({
         type: 'ADD_CART',
         payload: product
