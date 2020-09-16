@@ -24,7 +24,7 @@ const authentication = async(req, res, next) => {
         }
     }
     //esta función devuelve un middleware en base a los roles que permite la array roles
-const is = (roles) => async(req, res, next) => {
+const is = (roles) => (req, res, next) => {
     if (!roles.includes(req.user.role)) {
         return res.status(403).send({
             message: 'You are not allowed to access this zone'
